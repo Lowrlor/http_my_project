@@ -1,0 +1,31 @@
+{
+  "name": "http_look_like_my_idea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "gm": "^1.23.1",
+    "moment": "^2.29.1",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6",
+    "pug": "^3.0.0",
+    "sharp": "^0.26.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lowrlor/http_my_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lowrlor/http_my_project/issues"
+  },
+  "homepage": "https://github.com/Lowrlor/http_my_project#readme"
+}
