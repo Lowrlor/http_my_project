@@ -1,0 +1,14 @@
+extends ./layouts/main.pug
+include ./includes/profile.pug
+block content 
+  each item in profile
+    +profile(item)
+  form(action="/edit" method="post").r-p-l
+      button 
+        <i class="fas fa-user-edit"></i>
+  form(action="/" method="get").r-p-l
+      button 
+        <i class="fas fa-backward"></i>
+  
+
+  

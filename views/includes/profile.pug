@@ -1,0 +1,11 @@
+mixin profile(account)
+  -
+    var email= account.email
+    var pass= account.pass
+    var avatar= account.avatar
+  .profile
+    .profile.avatar
+      img(src=avatar)
+    .profile.email #{email}  
+    .profile.pass #{pass}
+         

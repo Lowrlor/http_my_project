@@ -1,0 +1,13 @@
+block head
+  form(action="/" method="get")
+      input(type="button" value="Main")
+      input(type="text", search="...", value="", placeholder="Search...")
+      input(type="submit" value="Search")
+  form(action="/login" method="get")
+      button Login
+  form(action="/register" method="get")
+      button Register
+  if  login 
+    form(action="/exit" method="get")
+        button Exit
+  else 

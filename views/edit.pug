@@ -1,0 +1,12 @@
+extends ./layouts/main.pug
+block content
+    form(action="/save_edit" method="post" enctype="multipart/form-data")
+        input(type="text", name="email", value=email, placeholder="Email")
+        br
+        input(type="text", name="pass", value=pass, placeholder="Password")
+        br
+        input(type="file" name="avatar" value=avatar)
+        br
+        input(type="submit" value="Сonfirm")
+    form(action="/")
+      button Back

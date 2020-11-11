@@ -1,0 +1,43 @@
+extends ./layouts/main.pug
+block content
+  h1 #{title}
+  if  login 
+    img(src=account.avatar)
+    p=account.email
+    form(action="/exit" method="get").r-l-s
+        button.button 
+          <i class="fas fa-sign-out-alt"></i>
+    form(action="/profile" method="get").r-l-s
+      button.button Profile
+  else
+    form(action="/login" method="get").r-l-s.l-s-p
+        button.button.l-s-p
+          <i class="fas fa-sign-in-alt"></i>
+    form(action="/register" method="get").r-l-s
+        button.button.p-center-register-all-post Register 
+  form(action="/search" method="post").r-l-s
+      input(type="text" name="search" placeholder="Search...")
+      button.button.l-s-p
+        <i class="fas fa-search"></i>
+  form(action="/save_post" method="post")
+      input(type="text" name="post" placeholder="Post").textarea
+      button.button.l-s-p
+          <i class="fas fa-plus" style="width: 14px"></i>
+  form(action="/all" method="post")
+    button.button.p-center-register-all-post All post
+    if found_post[0]
+      ul
+      each item, index in found_post
+        .brd.text-post
+          ul.test
+            name=item.account+": "
+            post=item.post
+    else
+      ul
+      each item, index in list
+        .brd.text-post
+          ul.text 
+            name=item.account+": "
+            post=item.post
+
+    

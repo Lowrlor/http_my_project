@@ -1,0 +1,13 @@
+extends ./layouts/main.pug
+block content
+    form(action="/check" method="post")
+        input(type="text", name="email", value="", placeholder="Email")
+        br
+        input(type="password", name="password", value="", placeholder="Password")
+        br
+        button.button Confirm
+    form(action="/register")
+      button.button Register
+    form(action="/")
+      button.button
+        <i class="fas fa-backward"></i>
